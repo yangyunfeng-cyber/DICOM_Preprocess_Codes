@@ -1,4 +1,3 @@
-# 影像组学批量特征提取
 import os
 from radiomics import featureextractor
 import pandas as pd
@@ -39,8 +38,6 @@ def get_dilation_mask(allSets_path):
                     print(str(Num) , maskpath)
     print('数据集标签膨胀结束，共处理完'+ str(Num)+'个标签文件！')
 
-
-
 def saved_preprocessed(savedImg,origin,direction,xyz_thickness,saved_name):
     newImg = sitk.GetImageFromArray(savedImg)
     newImg.SetOrigin(origin)
@@ -60,7 +57,6 @@ def window_transform(ct_array, windowWidth, windowCenter, normal=False):
     if not normal:
         newimg = (newimg * 255).astype('uint8')
     return newimg
-
 
 def CT_transform_ww_wc(all_path):
     """
