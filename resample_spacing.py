@@ -25,4 +25,4 @@ def file_name(file_dir):
                 newimage = resample.Execute(img)
                 sitk.WriteImage(newimage, end_dirs+'/Pre_N4_resam113_MR.nii')              
 
-file_name('A:/BaiduNetdiskDownload/tu xiang-zhao')   
+file_name('A:/BaiduNetdiskDownload/tu xiang-zhao')   #总文件夹
