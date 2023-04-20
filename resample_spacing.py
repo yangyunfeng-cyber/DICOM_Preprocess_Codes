@@ -10,7 +10,7 @@ def file_name(file_dir):
                 newSpacing = [1,1,3]  #可根据数据本身的特点来确定，尽量不过多改变数据
                 newSpacing = np.array(newSpacing, float)           
                 img = sitk.ReadImage(imageName)   
-                newSize = img.GetSize()* img.GetSpacing() / newSpacing 
+                newSize = np.array(img.GetSize())* np.array(img.GetSpacing()) / newSpacing 
                 newSize = newSize.astype(np.int_)
 
                 resample = sitk.ResampleImageFilter()
