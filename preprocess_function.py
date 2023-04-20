@@ -86,7 +86,8 @@ def CT_transform_ww_wc(all_path):
                 #by tumor (recommended)
                 tumor_wide = tumor_max - tumor_min
                 tumor_center = (tumor_max + tumor_min) / 2
-                tumor_wl = window_transform(ct_array, tumor_wide, tumor_center, normal=True)
+		#注意这个window_transform函数中的第二个，第三个参数是设置窗宽、窗位的具体值，可以按照自己意愿设置其它的值也可以，此处是根据肿瘤的体素值来设置最好的窗宽窗位
+                tumor_wl = window_transform(ct_array, tumor_wide, tumor_center, normal=True) 
                 saved_name = os.path.join(end_dirs, 'IMG_ww_wc.nii')
                 saved_preprocessed(tumor_wl, origin, direction, xyz_thickness, saved_name)
                 Num+=1 
