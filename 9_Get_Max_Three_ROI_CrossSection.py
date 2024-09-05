@@ -1,3 +1,7 @@
+"""
+这部分代码是为了获取病灶VOI序列中，病灶截面积最大的三个截面。作用是用于生成2D深度学习网络的训练集和测试集，将3D数据转换为2D数据
+"""
+
 import os
 import SimpleITK as sitk
 import numpy as np
