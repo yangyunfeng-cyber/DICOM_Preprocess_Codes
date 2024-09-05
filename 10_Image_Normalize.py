@@ -1,3 +1,7 @@
+"""
+这段代码是用来将MRI的灰度值归一化的
+"""
+
 def file_name(file_dir):
     """循环目录，将MR的灰度值归一化到[0，255]"""
     for root, dirs, files in os.walk(file_dir):     
@@ -14,5 +18,5 @@ def file_name(file_dir):
                 sitk.WriteImage(image, end_dirs+'/Pre_N4_resam113_norm_MR.nii') 
                 print(imageName)             
 
-file_name('A:/BaiduNetdiskDownload/tu xiang-zhao')    
+file_name('./BaiduNetdiskDownload')    
 
