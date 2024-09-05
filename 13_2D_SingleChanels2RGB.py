@@ -1,5 +1,7 @@
+"""
+用于将2D的医学影像的灰度图转换为RGB图以适应深度学习网络的通道数，方便使用预训练模型
+"""
 import os
-
 from PIL import Image
 import numpy as np
 
