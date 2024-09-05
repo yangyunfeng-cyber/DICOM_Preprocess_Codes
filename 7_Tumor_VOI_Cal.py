@@ -1,8 +1,13 @@
+"""
+通过计算MASK的VOI区域计算病灶的体积，计算公式：体素的个数*体素的单位体积
+这样可以获取肿瘤的量化特征
+"""
+
 def ROI_volume_Cal_nii(maskName):  
     """
-    功能：对ROI的占位体积进行计算
-    输入：真实ROI的路径
-    输出：ROI的占位体积
+    功能：对VOI的占位体积进行计算
+    输入：真实VOI的路径
+    输出：VOI的占位体积
     """
     sitkImage = sitk.ReadImage(maskName) 
     maskArr = sitk.GetArrayFromImage(sitkImage)  #order:z,y,x
