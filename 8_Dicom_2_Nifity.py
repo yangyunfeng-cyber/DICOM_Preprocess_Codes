@@ -1,3 +1,7 @@
+"""
+这部分代码的作用是将dicom格式的医学影像转换nii格式，方便后续处理！
+"""
+
 def main(file_dir):
     """
     功能：循环目录将dicom转换为nii
@@ -27,4 +31,4 @@ def main(file_dir):
                 sitk.WriteImage(sitkImage_dicom,savepath + img_name)  
                 # sitk.ResampleImageFilter()
         
-main('A:/A_Data_of_hostpitals/A_Data_of_Cancer_hospital/Uterine_prognosis/img')  
+main('./img')  
