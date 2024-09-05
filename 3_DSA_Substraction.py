@@ -1,7 +1,9 @@
+""""
+这部分代码是本人根据DSA(数字血管造影图像）的减影原理写的，琢磨了一下，基本功能都实现了,效果一般但能将减影后的图像进行保存（Radiant软件也能进行减影操作，但是软件里面无法保存减影后的图像）
+目前没有在网上看到有DSA减影的开源代码，这可能是头一份。
+"""
 import SimpleITK as sitk
 import os
-
-
 
 def window_transform(ct_array, windowWidth, windowCenter, normal=False):
     """
