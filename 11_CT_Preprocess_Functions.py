@@ -1,3 +1,7 @@
+"""
+这段代码包括了对肿瘤VOI进行膨胀处理，对CT的窗宽，窗位进行统一处理之后，然后提取CT的放射组学特征
+"""
+
 import os
 from radiomics import featureextractor
 import pandas as pd
