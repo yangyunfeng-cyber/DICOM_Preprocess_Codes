@@ -1,3 +1,7 @@
+"""
+用于对图像的spacing进行重采样，使数据保持统一！
+"""
+
 def file_name(file_dir):
     """循环目录，对MR进行重采样规范化"""
     for root, dirs, files in os.walk(file_dir):     
@@ -25,4 +29,4 @@ def file_name(file_dir):
                 newimage = resample.Execute(img)
                 sitk.WriteImage(newimage, end_dirs+'/Pre_N4_resam113_MR.nii')              
 
-file_name('A:/BaiduNetdiskDownload/tu xiang-zhao')   #总文件夹
+file_name('./MRI')   #总文件夹
